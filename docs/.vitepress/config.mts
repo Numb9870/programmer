@@ -3,6 +3,7 @@ import { withSidebar } from 'vitepress-sidebar';
 
 const vitePressOptions: Parameters<typeof defineConfig>[0] = {
   /* 站点元数据 */
+  base: '/programmer/',
   // 站点的标题。使用默认主题时，这将显示在导航栏中。
   title: '程序员手册',
   // 站点的描述。这将呈现为页面 HTML 中的 <meta> 标签。
@@ -10,7 +11,7 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
   // 在页面 HTML 的 <head> 标签中呈现的其他元素
   head: [
     // 添加一个 favicon
-    ['link', { rel: 'icon', href: '/public/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/programmer/public/favicon.ico' }],
   ],
   // 站点的 lang 属性
   lang: 'zh-CN',
