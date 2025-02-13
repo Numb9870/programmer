@@ -4,6 +4,8 @@ outline: deep
 
 # Promise
 
+> Promise 的出现最重要的是为了统一js中的异步实现方案。
+
 > Promise 语法上 Promise 是一个构造函数用来封装异步操作并可以获取其成功或失败的结果。
 
 ## 一、实例化Promise对象

@@ -120,6 +120,8 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
     server: {
       // 监听端口
       port: 5173,
+      // 是否自动打开浏览器
+      open: true,
     },
   },
 };
