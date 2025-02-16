@@ -5,18 +5,10 @@ import DefaultTheme from 'vitepress/theme';
 // 自定义样式
 import './custom.css';
 
-// 返回计算机首页
-import BackComputerIndex from '../../components/BackComputerIndex.vue';
-// 返回全段首页
-import BackFrontIndex from '../../components/BackFrontIndex.vue';
-
 /* 注册全局组件 */
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
-    // 注册自定义全局组件
-    app.component('BackComputerIndex', BackComputerIndex);
-    app.component('BackFrontIndex', BackFrontIndex);
   },
 } satisfies Theme;
 
