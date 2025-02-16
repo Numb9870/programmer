@@ -11,7 +11,7 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
   // 在页面 HTML 的 <head> 标签中呈现的其他元素
   head: [
     // 添加一个 favicon
-    ['link', { rel: 'icon', href: '/programmer/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/programmer/image/favicon.ico' }],
   ],
   // 站点的 lang 属性
   lang: 'zh-CN',
@@ -22,7 +22,7 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
   /* 默认主题配置 */
   themeConfig: {
     // 站点图标
-    logo: './logo.svg',
+    logo: './image/logo.svg',
     // 站点标题
     siteTitle: '学习笔记',
     // 导航栏 https://vitejs.cn/vitepress/reference/default-theme-sidebar
