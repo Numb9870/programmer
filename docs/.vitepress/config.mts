@@ -123,6 +123,14 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
       // 是否自动打开浏览器
       open: true,
     },
+    // 静默sass
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
+      },
+    },
   },
 };
 
