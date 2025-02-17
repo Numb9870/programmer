@@ -1,7 +1,7 @@
 {
   "name": "programmer",
   "description": "programmer Practice Manual, full stack learning docs.",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,6 +20,7 @@
   "author": "Numb9870",
   "license": "MIT",
   "devDependencies": {
+    "naive-ui": "^2.41.0",
     "sass": "^1.85.0",
     "vitepress": "^1.6.3",
     "vitepress-sidebar": "^1.31.0"
