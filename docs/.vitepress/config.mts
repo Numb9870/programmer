@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress';
 import { withSidebar } from 'vitepress-sidebar';
 
+const fileAndStyles: Record<string, string> = {};
+
 const vitePressOptions: Parameters<typeof defineConfig>[0] = {
   /* 站点元数据 */
   base: '/programmer/',
@@ -116,6 +118,9 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
   },
   // Vite 配置
   vite: {
+    ssr: {
+      noExternal: ['naive-ui', 'date-fns', 'vueuc'],
+    },
     // 服务器设置
     server: {
       // 监听端口
@@ -131,6 +136,25 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
         },
       },
     },
+  },
+  postRender(context) {
+    const styleRegex = /<css-render-style>((.|\s)+)<\/css-render-style>/;
+    const vitepressPathRegex = /<vitepress-path>(.+)<\/vitepress-path>/;
+    const style = styleRegex.exec(context.content)?.[1];
+    const vitepressPath = vitepressPathRegex.exec(context.content)?.[1];
+    if (vitepressPath && style) {
+      fileAndStyles[vitepressPath] = style;
+    }
+    context.content = context.content.replace(styleRegex, '');
+    context.content = context.content.replace(vitepressPathRegex, '');
+  },
+  transformHtml(code, id) {
+    const html = id.split('/').pop();
+    if (!html) return;
+    const style = fileAndStyles[`/${html}`];
+    if (style) {
+      return code.replace(/<\/head>/, `${style}</head>`);
+    }
   },
 };
 

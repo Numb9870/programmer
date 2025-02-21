@@ -23,10 +23,10 @@
 
     <!-- flex-wrap -->
     <code>flex-wrap：</code>
-    <NRadioGroup v-model:value="selected_flex_wrap" @change="handleFlexWrapChange">
-      <NRadio v-for="(item, index) in flex_wrap" :key="index" :value="item" :label="item" />
-    </NRadioGroup>
-    <NDivider />
+    <n-radio-group v-model:value="selected_flex_wrap" @change="handleFlexWrapChange">
+      <n-radio v-for="(item, index) in flex_wrap" :key="index" :value="item" :label="item" />
+    </n-radio-group>
+    <n-divider />
 
     <!-- align-content -->
     <code>align-content：</code>
@@ -49,6 +49,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { NButton, NRadioGroup, NRadio, NDivider } from 'naive-ui';
 
 /* *******************************************flex 属性勾选******************************************* */
 // flex-direction
