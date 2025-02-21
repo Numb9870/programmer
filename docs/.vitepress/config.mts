@@ -1,6 +1,10 @@
 import { defineConfig } from 'vitepress';
 import { withSidebar } from 'vitepress-sidebar';
 
+import AutoImport from 'unplugin-auto-import/vite';
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
+import Components from 'unplugin-vue-components/vite';
+
 const vitePressOptions: Parameters<typeof defineConfig>[0] = {
   /* 站点元数据 */
   base: '/programmer/',
@@ -116,6 +120,19 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
   },
   // Vite 配置
   vite: {
+    plugins: [
+      AutoImport({
+        imports: [
+          'vue',
+          {
+            'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar'],
+          },
+        ],
+      }),
+      Components({
+        resolvers: [NaiveUiResolver()],
+      }),
+    ],
     // 服务器设置
     server: {
       // 监听端口

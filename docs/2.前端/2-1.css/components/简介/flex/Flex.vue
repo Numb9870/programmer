@@ -23,10 +23,10 @@
 
     <!-- flex-wrap -->
     <code>flex-wrap：</code>
-    <n-radio-group v-model:value="selected_flex_wrap" @change="handleFlexWrapChange">
-      <n-radio v-for="(item, index) in flex_wrap" :key="index" :value="item" :label="item" />
-    </n-radio-group>
-    <n-divider />
+    <NRadioGroup v-model:value="selected_flex_wrap" @change="handleFlexWrapChange">
+      <NRadio v-for="(item, index) in flex_wrap" :key="index" :value="item" :label="item" />
+    </NRadioGroup>
+    <NDivider />
 
     <!-- align-content -->
     <code>align-content：</code>
@@ -42,13 +42,12 @@
 
   <!-- 容器修改按钮 -->
   <div class="flex-container-button">
-    <n-button @click="flex_item.push(flex_item.length)">添加</n-button>
+    <NButton @click="flex_item.push(flex_item.length)">添加</NButton>
     <n-button @click="flex_item.pop()">删除</n-button>
   </div>
 </template>
 
 <script setup lang="ts">
-import { NRadioGroup, NRadio, NDivider, NButton } from 'naive-ui';
 import { ref } from 'vue';
 
 /* *******************************************flex 属性勾选******************************************* */
