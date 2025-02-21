@@ -24,7 +24,7 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
   /* 默认主题配置 */
   themeConfig: {
     // 站点图标
-    logo: '/programmer/image/logo.svg',
+    logo: '/image/logo.svg',
     // 站点标题
     siteTitle: '学习笔记',
     // 导航栏 https://vitejs.cn/vitepress/reference/default-theme-sidebar
