@@ -52,8 +52,6 @@ const NaiveUIProvider = defineComponent({
   },
 });
 
-console.log(import.meta);
-
 /* 注册全局组件 */
 export default {
   extends: DefaultTheme,
