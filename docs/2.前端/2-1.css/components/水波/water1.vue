@@ -4,12 +4,6 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-
-const range = ref(10);
-</script>
-
 <style scoped lang="scss">
 #container1 {
   width: 100%;
