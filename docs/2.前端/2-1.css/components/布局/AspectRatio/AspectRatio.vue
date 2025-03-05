@@ -24,13 +24,13 @@ onMounted(async () => {
     throw new Error('aspect_ratio_img is not found');
   }
   // 设置16 / 9
-  aspect_ratio_img.style.width = '600px';
+  aspect_ratio_img.style.width = '100%';
   // 等待更新完毕
   await nextTick();
   // 拿到宽高比
   const rect = aspect_ratio_img.getBoundingClientRect();
-  imgSize.width = rect.width + 'px';
-  imgSize.height = rect.height + 'px';
+  imgSize.width = rect.width.toFixed(2) + 'px';
+  imgSize.height = rect.height.toFixed(2) + 'px';
 });
 
 // 图片宽高的像素
@@ -65,15 +65,15 @@ const handleSelect = (key: string) => {
   }
   aspect_ratio_img.style.aspectRatio = key;
   const rect = aspect_ratio_img.getBoundingClientRect();
-  imgSize.width = rect.width + 'px';
-  imgSize.height = rect.height + 'px';
+  imgSize.width = rect.width.toFixed(2) + 'px';
+  imgSize.height = rect.height.toFixed(2) + 'px';
 };
 </script>
 
 <style lang="scss" scoped>
 .container {
   width: 100%;
-  height: 400px;
+  height: 700px;
   background-color: #333333;
   display: flex;
   flex-wrap: wrap;
