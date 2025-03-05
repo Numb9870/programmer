@@ -2,7 +2,7 @@
   <div>当前图片宽度：{{ imgSize.width }}，当前图片高度：{{ imgSize.height }}</div>
 
   <div class="container">
-    <img id="aspect_ratio_img" src="/programmer/image/resource/astral.jpg" alt="astral" />
+    <img id="aspect_ratio_img" src="/image/resource/astral.jpg" alt="astral" />
   </div>
 
   <n-dropdown trigger="hover" :options="options" @select="handleSelect">
