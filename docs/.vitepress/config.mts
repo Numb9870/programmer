@@ -137,6 +137,7 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
       },
     },
   },
+  // naive-ui 样式
   postRender(context) {
     const styleRegex = /<css-render-style>((.|\s)+)<\/css-render-style>/;
     const vitepressPathRegex = /<vitepress-path>(.+)<\/vitepress-path>/;

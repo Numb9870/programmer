@@ -1,6 +1,17 @@
+/* 带缩进的多级侧边栏 */
 .group:has([role='button']) .VPSidebarItem.level-0 .items {
-    padding-left: 16px !important;
-    border-left: 1px solid var(--vp-c-divider);
-    border-radius: 2px;
-    transition: background-color 0.25s;
-  }
+  padding-left: 16px !important;
+  border-left: 1px solid var(--vp-c-divider);
+  border-radius: 2px;
+  transition: background-color 0.25s;
+}
+
+/* 自定义 主页Hero 中 name 的颜色 */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+}
+
+.VPImage:hover {
+  filter: drop-shadow(0 0 2rem crimson);
+}
