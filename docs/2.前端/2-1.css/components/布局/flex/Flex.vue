@@ -2,7 +2,7 @@
   <div style="display: flex; flex-wrap: wrap; justify-content: space-around">
     <!-- flex-wrap -->
     <n-dropdown trigger="hover" :options="flex_wrap_options" @select="handleFlexWrapChange">
-      <n-button>flex-direction</n-button>
+      <n-button>flex-wrap</n-button>
     </n-dropdown>
 
     <!-- flex-direction -->

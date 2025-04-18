@@ -12,6 +12,7 @@
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
 }
 
+/* Hero image的 图片阴影 */
 .VPImage:hover {
   filter: drop-shadow(0 0 2rem crimson);
 }
