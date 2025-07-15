@@ -16,3 +16,7 @@
 .VPImage:hover {
   filter: drop-shadow(0 0 2rem crimson);
 }
+
+.VPImage{
+  transition: all 1s ease-in;
+}

@@ -123,8 +123,9 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
     },
     // 服务器设置
     server: {
+      host: '0.0.0.0',
       // 监听端口
-      port: 5173,
+      port: 9527,
       // 是否自动打开浏览器
       open: true,
     },
