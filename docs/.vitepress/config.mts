@@ -32,7 +32,7 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
       { text: '首页', link: '/' },
       { text: '计算机', link: '/1.计算机/' },
       { text: '前端', link: '/2.前端/' },
-      { text: '后端', link: '/3.后端/' },
+      { text: 'nodejs', link: '/3.nodejs/' },
     ],
     // 社交链接
     socialLinks: [{ icon: 'github', link: 'https://github.com/Numb9870' }],
@@ -160,6 +160,7 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
   },
 };
 
+// 侧边栏选项
 const vitePressSidebarOptions = [
   {
     // 文档文件所在的顶级路径。默认值为 /。
@@ -198,9 +199,9 @@ const vitePressSidebarOptions = [
   {
     // 文档文件所在的顶级路径。默认值为 /。
     documentRootPath: '/docs',
-    scanStartPath: '3.后端',
-    basePath: '/3.后端/',
-    resolvePath: '/3.后端/',
+    scanStartPath: '3.nodejs',
+    basePath: '/3.nodejs/',
+    resolvePath: '/3.nodejs/',
     // 如果为false,则创建菜单时所有分组都处于展开状态。如果为true,则创建菜单时所有分组都处于折叠状态。
     collapsed: true,
     // 是否将标题的第一个单词大写。
