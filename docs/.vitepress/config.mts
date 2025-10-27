@@ -33,6 +33,7 @@ const vitePressOptions: Parameters<typeof defineConfig>[0] = {
       { text: '计算机', link: '/1.计算机/' },
       { text: '前端', link: '/2.前端/' },
       { text: 'nodejs', link: '/3.nodejs/' },
+      { text: 'Python', link: '/4.Python/' },
     ],
     // 社交链接
     socialLinks: [{ icon: 'github', link: 'https://github.com/Numb9870' }],
@@ -202,6 +203,23 @@ const vitePressSidebarOptions = [
     scanStartPath: '3.nodejs',
     basePath: '/3.nodejs/',
     resolvePath: '/3.nodejs/',
+    // 如果为false,则创建菜单时所有分组都处于展开状态。如果为true,则创建菜单时所有分组都处于折叠状态。
+    collapsed: true,
+    // 是否将标题的第一个单词大写。
+    capitalizeFirst: true,
+    // 如果该值为true,则如果菜单名称以数字开头,则按数字而不是名称排序
+    sortMenusOrderNumericallyFromTitle: true,
+    // 从所有操作完成后显示的菜单项的每个菜单标题中删除特定的前缀。
+    removePrefixAfterOrdering: true,
+    // 此选项只能与 removePrefixAfterOrdering 选项结合使用以删除前缀。从提取的菜单文本中删除指定数量字符（至少一个）的第一部分。
+    prefixSeparator: '.',
+  },
+  {
+    // 文档文件所在的顶级路径。默认值为 /。
+    documentRootPath: '/docs',
+    scanStartPath: '4.Python',
+    basePath: '/4.Python/',
+    resolvePath: '/4.Python/',
     // 如果为false,则创建菜单时所有分组都处于展开状态。如果为true,则创建菜单时所有分组都处于折叠状态。
     collapsed: true,
     // 是否将标题的第一个单词大写。
